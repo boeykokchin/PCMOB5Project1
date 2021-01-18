@@ -8,6 +8,8 @@ from flask_jwt import JWT, jwt_required, current_identity
 import os
 basedir = os.path.abspath(os.path.dirname(__file__))
 app = Flask(__name__)
+# app.run(host='0.0.0.0', debug=True)
+# app.run(debug=True, host= '192.168.0.154')
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + os.path.join(basedir,"db.sqlite")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
